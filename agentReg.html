@@ -5,8 +5,40 @@
 		</head>
 		<body>
 			<div id = "header">
-				<h1><strong>iNeedCoffee!</strong></h1>
+				<h1 style = "margin-top:0;">iNeedCoffee!</h1>
 			</div>
-			<p>By Brian Lyu & Jeffrey Lee</p>
+      		<div id = "outer" style = "width:100%; height: 90%; margin:0;">     
+				<div id = "agentInfo">
+          			<div id="contactContent">
+            			<form>
+              				<label>Full Name:</label><input type="text" name="fullName" />
+              				<br>
+              				<label>Email:</label><input type="text" name="email" />
+			              	<br>
+			              	<label>Work Phone:</label><input type="text" name="phone" />
+			              	<br>
+			              	<label>Agency:</label><input type="text" name="agency" />
+			              	<br>
+			              	<label>Desired Compensation:</label><input type="text" name="salary" />
+			              	<br>
+			              	<label>Personal Website:</label><input type="text" name="web" />
+            			</form>
+          			</div>
+			  	</div>
+			  	<div id = "photoID">
+          			<div id = "photoContent">   
+          				<div id = "preview" style = "border:1 px solid black; vertical-align: center;">
+            				File Image Preview
+          				</div>
+          			</div>
+          			<div>
+           				<form action="/action_page.php">
+              				<input class = "upload" type="file" name="pic" accept="image/*" style = "background-color: brown; width: 40%;">
+             				<br>
+             				<input class = "upload" type="submit" style = "margin: 0 auto;">
+            			</form>
+          			</div>
+			  </div>
+      		</div>
 		</body>
 	</html>
