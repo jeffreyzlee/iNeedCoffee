@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height:100%;
   overflow: hidden;
-  
+
 }
 
 #header{
@@ -28,7 +28,7 @@ html, body {
 }
 
 .button {
-    background-color: #e7e7e7;; /* Blue */
+    background-color: #e7e7e7; /* Gray */
     border: none;
     color: black;
     padding: 15px 32px;
@@ -67,6 +67,51 @@ html, body {
 #preview{
   background-color: gray;
   margin: 20% 30% 0% 30%;
+  height: 250px;
+  line-height: 250px;
+}
+
+#ownerInfo{
+  width:50%;
+  float:left;
+  overflow:hidden;
+  background-color: white;
+  height:100%;
+}
+
+#ownerContent{
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+#ownerPreferences{
+  justify-content: center;
+}
+
+#preferenceTable{
+  align-self: center;
+  overflow:hidden;
+  background-color: white;
+}
+
+#contactPhoto{
+  float:left;
+  width:100%;
+  background-color: white;
+  overflow:hidden;
+  height:100%;
+  text-align:center;
+}
+
+#ownerPhoto{
+  margin-top:0%;
+  margin-bottom:0%;
+  height: 35%;
+}
+
+#photoPreview{
+  background-color: gray;
+  margin: 0% 30% 0% 30%;
   height: 250px;
   line-height: 250px;
 }
@@ -199,4 +244,3 @@ input[type=submit] {
   position: absolute;
   left: -.1em;
 }
-
