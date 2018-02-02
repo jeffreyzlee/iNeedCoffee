@@ -2,15 +2,16 @@ html, body {
   margin: 0;
   padding: 0;
   height:100%;
-  min-height:100%;
+  overflow: hidden;
+  
 }
 
 #header{
 	width: 100%;
-  height: 10%;
-  vertical-align:top;
+  	height:6%;
 	background-color: brown;
 	padding-left: 1%;
+
 }
 
 .ownerButton {
@@ -62,6 +63,36 @@ html, body {
   margin-top:10%;
   height: 50%;
 }
+
+#preview{
+  background-color: gray;
+  margin: 20% 30% 0% 30%;
+  height: 250px;
+  line-height: 250px;
+}
+
+#chatMsg{
+	width: 60%;
+	float:left;
+	overflow:hidden;
+	height:70%;
+	background-color: white;
+}
+
+#sendText{
+	float:left;
+	clear:left;
+	width:60%;
+	height:30%;
+	background-color: white;
+}
+
+#progress{
+	width: 40%;
+	overflow:hidden;
+	height:100%;
+	background-color: white;
+}
 input {
   border: none;
   background-color: white;
@@ -69,19 +100,103 @@ input {
   margin-bottom: 10%;
   padding-right: 10%;
   border: 1px solid black;
-  width: 30%;
+  width: 20%;
 }
 
 .upload{
 	width: 10%;
 }
-#preview{
-  background-color: gray;
-  margin: 20% 30% 0% 30%;
-  height: 250px;
-  line-height: 250px;
-}
+
+
 label{
     display:inline-block;
     width:25%;
 }
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2% 2% 2% 2%;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #fdd;
+}
+
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 40%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #aaa;
+}
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    width:10%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#msg{
+	border:2px solid #dedede;
+	border-radius: 10px;
+    padding: 10px;
+    margin: 2% 2% 2% 2%;
+    width: 95%;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.progressBar {
+  list-style: none;
+  font-size: 20pt;
+}
+.progressBar li {
+  border-left: 0.3em solid green;
+  padding: 0 0 2.0em 1em;
+  position: relative;
+}
+.progressBar li::before {
+  content: '\25B6'	;
+  color: dimgray;
+  font-size: 1.0em;
+  position: absolute;
+  left: -.1em;
+}
+
