@@ -5,7 +5,7 @@ html, body {
   overflow: hidden;
 
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-  
+
 }
 
 #header{
@@ -67,6 +67,8 @@ html, body {
 }
 
 #preview{
+  border: 1px solid black;
+  vertical-align: center;
   background-color: gray;
   margin: 20% 30% 0% 30%;
   height: 250px;
