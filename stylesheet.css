@@ -87,13 +87,32 @@ html, body {
 }
 
 #ownerPreferences{
-  justify-content: center;
+  width:50%;
+  float:left;
+  height:100%;
 }
 
-#preferenceTable{
-  align-self: center;
-  overflow:hidden;
-  background-color: white;
+.vertical-menu {
+    width: 80%;
+    margin-left: 10%;
+    margin-top:15%;
+}
+
+.vertical-menu p {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu p:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu p.active {
+    background-color: brown;
+    color: white;
 }
 
 #contactPhoto{
@@ -113,9 +132,10 @@ html, body {
 
 #photoPreview{
   background-color: gray;
-  margin: 0% 30% 0% 30%;
-  height: 250px;
-  line-height: 250px;
+  margin: 0% 0% 10% 35%;
+  height: 220px;
+  width:220px;
+  line-height: 220px;
 }
 
 #chatMsg{
