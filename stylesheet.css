@@ -49,6 +49,22 @@ html, body {
   height:100%;
   text-align:center;
 }
+
+.outerLeft{
+	width:60%;
+	float:left;
+	background-color:white;
+	overflow:hidden;
+}
+
+.outerRight{
+	overflow:hidden;
+	width:40%;
+	float:left;
+	background-color:white;
+	margin: 0 auto;
+	
+}
 .ownerInfo{
   width:50%;
   float:left;
@@ -201,17 +217,7 @@ html, body {
 }
 
 
-.outerLeft{
-	width:60%;
-	float:left;
-	background-color:white;
-}
 
-.outerRight{
-	float:left;
-	background-color:white;
-	
-}
 .complete{
   color: green;
 }
