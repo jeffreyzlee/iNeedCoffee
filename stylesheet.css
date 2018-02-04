@@ -162,6 +162,15 @@ html, body {
 	height:100%;
 	background-color: white;
 }
+
+.complete{
+  color: green;
+}
+
+.inProgress{
+  color: red;
+}
+
 input {
   border: none;
   background-color: white;

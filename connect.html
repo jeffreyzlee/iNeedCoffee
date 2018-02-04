@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="UTF-8">
+			<title>iNeedCoffee!</title>
 			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		</head>
 		<body>
@@ -23,7 +25,7 @@
 
 					<div class="container">
 						  <img src="https://static01.nyt.com/images/2017/01/12/well/move/adam-bryant-headshot/adam-bryant-headshot-square320-v2.jpg" alt="Avatar">
-						  <p>Okay, keep in mind that San Francisco's expected rent may be slightly above your budget. I will have a list of potential 
+						  <p>Okay, keep in mind that San Francisco's expected rent may be slightly above your budget. I will have a list of potential
 						  options by next week for you, until then let me know if anything changes on your behalf or if you have any questions.</p>
 						  <span class="time-right">11:02</span>
 					</div>
@@ -36,7 +38,7 @@
 				</div>
 
 				<div id = "sendText">
-						<form action=""> 
+						<form action="/action_page.php" method="post">
     						<textarea id="msg" name="Message" placeholder="Write something.." style = "height:120px;"></textarea>
     						<input type="submit" value="Send!">
     						<input name="myFile" type="file">
@@ -44,13 +46,13 @@
 				</div>
 				<div id = "progress">
 					<ol class="progressBar" style = "padding-left:20%; padding-top:5%;">
-					    <li class = "complete"><font color = "green">&nbsp&nbsp&nbsp&nbspConnected</li>
-					    <li class = "complete"><font color = "green">&nbsp&nbsp&nbsp&nbspPreferences Listed</li>
-					    <li><font color = "red">&nbsp&nbsp&nbsp&nbspResearch</li>
-					    <li>&nbsp&nbsp&nbsp&nbspPotential Locations</li>
-					    <li>&nbsp&nbsp&nbsp&nbspRankings</li>
-					    <li>&nbsp&nbsp&nbsp&nbspContacting</li>
-					    <li><font color = "red">&nbsp&nbsp&nbsp&nbspSign!</li>
+					    <li class = "complete">&nbsp;&nbsp;&nbsp;&nbsp;Connected</li>
+					    <li class = "complete">&nbsp;&nbsp;&nbsp;&nbsp;Preferences Listed</li>
+					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Research</li>
+					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Potential Locations</li>
+					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Rankings</li>
+					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Contacting</li>
+					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Sign!</li>
 					</ol>
 				</div>
 			</div>
