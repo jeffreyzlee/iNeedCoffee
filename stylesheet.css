@@ -59,14 +59,7 @@ html, body {
 		margin-top: 0;
 	}
 
-	#chatMsg{
-		width:100%;
-		
-	}
 	#outerLeft{
-		width:100%;
-	}
-	#sendText{
 		width:100%;
 	}
 	#outerRight{
@@ -162,13 +155,14 @@ html, body {
 
 .chatMsg{
 	overflow-x:hidden;
-	height:80%;
+	height:75%;
 }
 
 
 .sendText{
-	width:100%;
-	height:20%;
+	margin: 0 auto;
+	width:90%;
+	height:25%;
 }
 
 .progress{
