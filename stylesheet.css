@@ -35,7 +35,7 @@ html, body {
 }
 
 .agentInfo{
-	float:left;
+  float:left;
   width:50%;
   overflow:hidden;
   background-color: white;
@@ -49,7 +49,25 @@ html, body {
   height:100%;
   text-align:center;
 }
+.ownerInfo{
+  width:50%;
+  float:left;
+  overflow:hidden;
+  background-color: white;
+  height:100%;
+}
 
+
+.ownerPreferences{
+  width:50%;
+   height:100%;
+   overflow:hidden;
+
+}
+.ownerContent{
+  margin-top: 15%;
+  margin-left: 15%;
+}
 @media (max-width:768px){
 	.agentInfo{
 		width:100%;
@@ -59,12 +77,24 @@ html, body {
 		margin-top: 0;
 	}
 
-	#outerLeft{
+	.outerLeft{
 		width:100%;
 	}
-	#outerRight{
+	.outerRight{
 		width:100%;
 	}
+
+	.ownerInfo{
+		width:100%;
+		clear:right;
+		float:left;
+		
+	}
+	.ownerPreferences{
+		width:100%;
+		float:none;
+	}
+
 }
 
 .contactContent {
@@ -86,24 +116,7 @@ html, body {
   line-height: 250px;
 }
 
-.ownerInfo{
-  width:50%;
-  float:left;
-  overflow:hidden;
-  background-color: white;
-  height:100%;
-}
 
-.ownerContent{
-  margin-top: 15%;
-  margin-left: 15%;
-}
-
-.ownerPreferences{
-  width:50%;
-  float:left;
-  height:100%;
-}
 
 .vertical-menu {
     width: 80%;
@@ -290,7 +303,7 @@ input[type=submit] {
     padding: 10px;
     margin: 2% 2% 2% 2%;
     width: 95%;
-    border-radius: 4px;
+
     box-sizing: border-box;
 
 }
