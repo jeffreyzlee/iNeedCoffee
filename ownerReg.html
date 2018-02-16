@@ -23,7 +23,7 @@
       <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
     </head>
 		<body>
-			<div class = "header" >
+			<div class = 'header'>
 				<h1 style = "margin-top:0;">iNeedCoffee!</h1>
 			</div>
       <div class = "outer" style = "width:100%; height: 94%; margin:0;">
@@ -54,14 +54,40 @@
   			</div>
         <div class = "ownerPreferences">
           <div class="vertical-menu" style = "text-align:center">
-            <p class="active">Preferences</p>
-            <p >Location</p>
-            <p >Rent</p>
-            <p >Coffee Shop Density</p>
-            <p >Crime Rate</p>
-            <p >Proximity to University</p>
-            <p >Other</p>
+            <p onclick="dropDown()" class="active">Preferences</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Location</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Rent</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Coffee Shop Density</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Crime Rate</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Proximity to University</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
+            <p onclick="dropDown()" >Other</p>
+						<div id = "myDropdown" class = "dropdown-content">
+							<a href="#">Link 1</a>
+						</div>
           </div>
+					<script>
+					function dropDown(){
+						document.getElementById("myDropdown").classList.toggle("show");
+					}
+					</script>
         </div>
       </div>
 		</body>

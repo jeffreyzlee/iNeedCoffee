@@ -64,7 +64,7 @@ html, body {
 	float:left;
 	background-color:white;
 	margin: 0 auto;
-	
+
 }
 .ownerInfo{
   width:50%;
@@ -105,7 +105,7 @@ html, body {
 		width:100%;
 		clear:right;
 		float:left;
-		
+
 	}
 	.ownerPreferences{
 		width:100%;
@@ -157,6 +157,27 @@ html, body {
     background-color: brown;
     color: white;
 }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 40%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
 
 .contactPhoto{
   float:left;
