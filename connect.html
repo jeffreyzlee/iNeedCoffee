@@ -3,49 +3,42 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>iNeedCoffee!</title>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		</head>
 		<body>
 			<div class = "header" >
 				<h1 style = "margin-top:0;">iNeedCoffee!</h1>
 			</div>
-			<div class = "outerLeft" style = "height: 94%;">
-				<div class = "chatMsg" >
-					<div class="container">
-						<img src="https://static01.nyt.com/images/2017/01/12/well/move/adam-bryant-headshot/adam-bryant-headshot-square320-v2.jpg" alt="Avatar">
-					  	<p>Hi, I will proceed with looking for locations in Cupertino, San Diego, and Pleasanton?</p>
-					  	<span class="time-right">11:00</span>
-					</div>
+	<div class = "outerLeft" style = "height: 94%;">
+		<div id="chatMsg" class = "chatMsg" >
 
-					<div class="container darker">
-				   	  	<img src="https://pixel.nymag.com/imgs/fashion/daily/2013/04/02/02-awkwafina.w710.h473.jpg" alt="Avatar" class="right">
-						<p>Hey! That sounds great, could you add San Francisco to that list?</p>
-						  <span class="time-left">11:01</span>
-					</div>
+		</div>
 
-					<div class="container">
-						  <img src="https://static01.nyt.com/images/2017/01/12/well/move/adam-bryant-headshot/adam-bryant-headshot-square320-v2.jpg" alt="Avatar">
-						  <p>Okay, keep in mind that San Francisco's expected rent may be slightly above your budget. I will have a list of potential
-						  options by next week for you, until then let me know if anything changes on your behalf or if you have any questions.</p>
-						  <span class="time-right">11:02</span>
-					</div>
+		<div class = "sendText">
+				<form name = "sendMsg">
+					<textarea id="Message" class="msg" placeholder="Write something.."></textarea>
+					<button type="button" id="submit" onclick = "addChatMessage()">Send</button>
+				</form>
+		</div>
+	</div>
 
-					<div class="container darker">
-						  <img src="https://pixel.nymag.com/imgs/fashion/daily/2013/04/02/02-awkwafina.w710.h473.jpg" alt="Avatar" class="right">
-						  <p>That's fine, I just want to keep all options open. Thanks!</p>
-						  <span class="time-left">11:05</span>
-					</div>
-				</div>
+	<script>
+		function addChatMessage() {
+		    var chat = document.getElementById('Message'); // finds the container
+		    if(chat.value != ""){
+			    var newDiv = document.createElement('div');
+			    	newDiv.id = "newMsg";
+			    	newDiv.className = "container";
+			    	newDiv.innerHTML = chat.value;
 
-				<div class = "sendText">
-						<form action="connect.html" method="post">
-    						<textarea class="msg" name="Message" placeholder="Write something.."></textarea>
-    						<input type="submit" value="Send!">
-    						<input name="myFile" type="file">
-  						</form>
-				</div>
-			</div>
+			    chatMsg.appendChild(newDiv);
+			    chat.value = "";
+			}
+
+		}
+	</script>
+
+
 			<div class = "outerRight" style = "height:94%;">
 				<div class = "progress">
 					<ol class="progressBar">
