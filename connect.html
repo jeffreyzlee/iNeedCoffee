@@ -5,7 +5,7 @@
 			<title>iNeedCoffee!</title>
 			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		</head>
-		<body>
+		<body style = "overflow: hidden">
 			<div class = "header" >
 				<h1 style = "margin-top:0;">iNeedCoffee!</h1>
 			</div>
@@ -39,18 +39,23 @@
 	</script>
 
 
-			<div class = "outerRight" style = "height:94%;">
-				<div class = "progress">
-					<ol class="progressBar">
-					    <li class = "complete">&nbsp;&nbsp;&nbsp;&nbsp;Connected</li>
-					    <li class = "complete">&nbsp;&nbsp;&nbsp;&nbsp;Preferences Listed</li>
-					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Research</li>
-					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Potential Locations</li>
-					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Rankings</li>
-					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Contacting</li>
-					    <li class = "inProgress">&nbsp;&nbsp;&nbsp;&nbsp;Sign!</li>
+			<div class = "outerRight" style = "height:94%; margin-top: 50px;">
+				<div class = "progress" >
+					<ol class="progressBar" style = "color: red;">
+					    <li id = "1" onclick="changeColor('1')">&nbsp;&nbsp;&nbsp;&nbsp;Connected</li>
+					    <li id = "2" onclick="changeColor('2')">&nbsp;&nbsp;&nbsp;&nbsp;Preferences Listed</li>
+					    <li id = "3" onclick="changeColor('3')">&nbsp;&nbsp;&nbsp;&nbsp;Research  Locations</li>
+					    <li id = "5" onclick="changeColor('5')">&nbsp;&nbsp;&nbsp;&nbsp;Rankings</li>
+					    <li id = "6" onclick="changeColor('6')">&nbsp;&nbsp;&nbsp;&nbsp;Contacting</li>
+					    <li id = "7" onclick="changeColor('7')">&nbsp;&nbsp;&nbsp;&nbsp;Sign!</li>
 					</ol>
 				</div>
 			</div>
+
+			<script>
+				function changeColor(id){
+					document.getElementById(id).style.color = 	"#228B22";
+				}
+			</script>
 		</body>
 	</html>
