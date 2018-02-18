@@ -3,7 +3,6 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>Agent Registration</title>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		</head>
 		<body>
@@ -13,19 +12,37 @@
       		<div class = "outer" style = "width:100%; height: 94%; margin:0;">
 				<div class = "agentInfo">
           			<div class="contactContent">
-            			<form>
-              				<label>Full Name:</label><input type="text" name="fullName" />
+            			<form id="contactForm" onsubmit="javascript:storeDetails();" action="ownerList.html">
+              				<label>Full Name:</label><input type="text" id="fullName" />
               				<br>
-              				<label>Email:</label><input type="text" name="email" />
+              				<label>Email:</label><input type="text" id="email" />
 			              	<br>
-			              	<label>Work Phone:</label><input type="text" name="phone" />
+			              	<label>Work Phone:</label><input type="text" id="phone" />
 			              	<br>
-			              	<label>Agency:</label><input type="text" name="agency" />
+			              	<label>Agency:</label><input type="text" id="agency" />
 			              	<br>
-			              	<label>Desired Compensation:</label><input type="text" name="salary" />
+			              	<label>Desired Compensation:</label><input type="text" id="salary" />
 			              	<br>
-			              	<label>Personal Website:</label><input type="text" name="web" />
+			              	<label>Personal Website:</label><input type="text" id="web" />
+											<input type="submit" action="ownerList.html">
             			</form>
+
+									<script>
+									function storeDetails() {
+										if(typeof(Storage)!=="undefined") {
+											localStorage.setItem('agentName', document.getElementById('fullName').value);
+											localStorage.setItem('agentEmail', document.getElementById('email').value);
+											localStorage.setItem('agentPhone', document.getElementById('phone').value);
+											localStorage.setItem('agency', document.getElementById('agency').value);
+											localStorage.setItem('salary', document.getElementById('salary').value);
+											localStorage.setItem('website', document.getElementById('web').value);
+
+											//code to store other values will go here
+										} else {
+											alert('Your browser do not support local storage');
+										}
+									}
+									</script>
           			</div>
 			  	</div>
 			  	<div class = "photoID">
