@@ -19,7 +19,10 @@
 			</style>
 			<meta charset="UTF-8">
 			<title>Owner Registration</title>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
     </head>
 		<body>
@@ -30,65 +33,183 @@
 				<div class = "ownerInfo">
           <div class = "ownerContent">
             <form>
-              <label>Full Name:</label><input type="text" name="fullName" />
+              <label>Full Name:</label><input type="text" name="fullName" id = "fullName"/>
               <br>
-              <label>Email:</label><input type="text" name="email" />
+              <label>Email:</label><input type="text" name="email" id = "email"/>
               <br>
-              <label>Work Phone:</label><input type="text" name="phone" />
+              <label>Work Phone:</label><input type="text" name="phone" id = "phone" />
             </form>
           </div>
           <div class = "contactPhoto">
-            <div class = "ownerPhoto">
-              <div class = "photoPreview" style = "border:1px solid black; ">
-                File Image Preview
-              </div>
-            </div>
             <div>
+            	<br>
+            	<br>
               <form action="connect.html">
-                <input class = "upload" type="file" name="pic" accept="image/*" style = "background-color: brown; width: 25%; margin-bottom: 3%">
-                <br>
-                <input class = "upload" type="submit" style = "margin: 0 auto;">
+                <button type = "button" id = "sub" onclick = "submitInfo()"> Submit! </button>
+                
               </form>
             </div>
           </div>
   			</div>
-        <div class = "ownerPreferences">
-          <div class="vertical-menu" style = "text-align:center">
-            <p onclick="dropDown()" class="active">Preferences</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Location</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Rent</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Coffee Shop Density</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Crime Rate</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Proximity to University</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-            <p onclick="dropDown()" >Other</p>
-						<div id = "myDropdown" class = "dropdown-content">
-							<a href="#">Link 1</a>
-						</div>
-          </div>
-					<script>
-					function dropDown(){
-						document.getElementById("myDropdown").classList.toggle("show");
-					}
-					</script>
-        </div>
+  		<script>
+  			function submitInfo(){
+  				var fullName = document.getElementById('fullName');
+  				localStorage.setItem("ownerName", fullName.value);
+  				var email = document.getElementById('email');
+  				localStorage.setItem("email", email.value);
+  				var phone = document.getElementById('phone');
+  				localStorage.setItem("phoneNum", phone.value);
+
+  				console.log(localStorage.getItem("email"));
+  				fullName.value = "";
+  				email.value = "";
+  				phone.value = "";
+
+  			}
+  		</script>
+        <div class="ownerPreferences">
+		  <div class="vertical-menu" id="accordion">
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Locations</a>
+		        </h4>
+		      </div>
+		      <div id="collapse1" class="panel-collapse collapse in">
+		        <div class="panel-body">
+		        <h5> Let's get started! Input up to 3 of your highest desired locations to open a coffee shop.</h5>
+		        <div class = "col-xs-9">
+		        <div class="form-group">
+				  <label >Location:</label>
+				  <input type="text" class="form-control" id="l1">
+				</div>
+				<div class="form-group">
+				  <label >Location:</label>
+				  <input type="text" class="form-control" id="l2">
+				</div>	
+				<div class="form-group">
+				  <label >Location:</label>
+				  <input type="text" class="form-control" id="l3">
+				</div>	
+				</div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Rent</a>
+		        </h4>
+		      </div>
+		      <div id="collapse2" class="panel-collapse collapse">
+		        <div class="panel-body">
+		        	<h5> Select your appropriate rent preference($/month) </h5>
+			        <form>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio">$3,000
+					    </label>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio">$5,000
+					    </label>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio">$7,000
+					    </label>
+					</form>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Population</a>
+		        </h4>
+		      </div>
+		      <div id="collapse3" class="panel-collapse collapse">
+		        <div class="panel-body">
+		        <h5> Select your appropriate population preference($/month) </h5>
+			        <form>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> >300,000
+					    </label>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> > 750,000
+					    </label>
+					     <label class="radio-inline">
+					      <input type="radio" name="optradio"> > 1,000,000
+					    </label>
+					</form>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Proximity to University</a>
+		        </h4>
+		      </div>
+		      <div id="collapse4" class="panel-collapse collapse">
+		        <div class="panel-body">
+		         <h5> Select your appropriate proximity preference (miles) </h5>
+			        <form>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> 5 miles
+					    </label>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> 10 miles
+					    </label>
+					     <label class="radio-inline">
+					      <input type="radio" name="optradio"> 20 miles
+					    </label>
+					</form>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Coffee Shops Nearby</a>
+		        </h4>
+		      </div>
+		      <div id="collapse5" class="panel-collapse collapse">
+		        <div class="panel-body">
+		         <h5> Select your appropriate coffee shop density preference (within 5 miles)</h5>
+			        <form>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> 1 or less
+					    </label>
+					    <label class="radio-inline">
+					      <input type="radio" name="optradio"> 5 or less
+					    </label>
+					     <label class="radio-inline">
+					      <input type="radio" name="optradio"> 10 or less
+					    </label>
+					</form>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h4 class="panel-title">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Other Preferences</a>
+		        </h4>
+		      </div>
+		      <div id="collapse6" class="panel-collapse collapse">
+		        <div class="panel-body">
+		        <h5> Anything else I should keep into account?</h5>
+		        <div class = "col-xs-9">
+		         <div class="form-group">
+				  <label >Enter Below:</label>
+				  <input type="text" class="form-control" id="l1">
+				</div>
+		        </div>
+		      </div>
+		    </div>
+
+		  </div> 
+		</div>
       </div>
 		</body>
 	</html>
