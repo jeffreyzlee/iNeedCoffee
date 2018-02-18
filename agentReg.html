@@ -24,7 +24,8 @@
 			              	<label>Desired Compensation:</label><input type="text" id="salary" />
 			              	<br>
 			              	<label>Personal Website:</label><input type="text" id="web" />
-											<input type="submit" action="ownerList.html">
+											<br>
+											<button type = "submit" id = "sub"> Submit! </button>
             			</form>
 
 									<script>
@@ -36,8 +37,6 @@
 											localStorage.setItem('agency', document.getElementById('agency').value);
 											localStorage.setItem('salary', document.getElementById('salary').value);
 											localStorage.setItem('website', document.getElementById('web').value);
-
-											//code to store other values will go here
 										} else {
 											alert('Your browser do not support local storage');
 										}
