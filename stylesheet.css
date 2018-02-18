@@ -38,19 +38,20 @@ html, body {
 
 .agentInfo{
   float:left;
+  margin-left: 30%;
+  margin-right: 30%;
   width:50%;
-  overflow:hidden;
   background-color: white;
   height:100%;
 }
 
-.photoID{
+/* .photoID{
   width:50%;
   background-color: white;
   overflow:hidden;
   height:100%;
   text-align:center;
-}
+} */
 
 .outerLeft{
 	width:60%;
@@ -89,6 +90,8 @@ html, body {
 @media (max-width:768px){
 	.agentInfo{
 		width:100%;
+    clear:right;
+    float:left;
 	}
 	.photoID{
 		width:100%;
@@ -180,7 +183,7 @@ html, body {
 .show {display:block;}
 
 
-.contactPhoto{
+/* .contactPhoto{
   float:left;
   width:100%;
   background-color: white;
@@ -202,7 +205,7 @@ html, body {
   height: 220px;
   width:220px;
   line-height: 220px;
-}
+} */
 
 
 .chatMsg{
