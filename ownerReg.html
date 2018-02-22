@@ -33,28 +33,36 @@
 				<div class = "ownerInfo">
           <div class = "ownerContent">
             <form action="ownerList.html">
-              <label>Full Name:</label><input type="text" name="fullName" id = "fullName"/>
+              <h4>PERSONAL INFORMATION</h4>
               <br>
-              <label>Email:</label><input type="text" name="email" id = "email"/>
+              <br>
+              <label>First Name:</label><input type="text" name="firstname" id = "firstname"/>
+              <br>
+              <label>Last Name:</label><input type="text" name="lastname" id = "lastname"/>
+              <br>
+              <label>Email Address:</label><input type="text" name="email" id = "email"/>
               <br>
               <label>Work Phone:</label><input type="text" name="phone" id = "phone" />
 							<br>
-							<button type = "submit" id = "sub" onclick = "submitInfo()"> Submit! </button>
+							<button type = "submit" id = "sub" onclick = "submitInfo()"> &emsp;Next!&emsp; </button>
             </form>
           </div>
 
   			</div>
   		<script>
   			function submitInfo(){
-  				var fullName = document.getElementById('fullName');
-  				localStorage.setItem("ownerName", fullName.value);
+  				var firstname = document.getElementById('firstname');
+  				localStorage.setItem("firstName", firstname.value);
+  				var lastname = document.getElementById('lastname');
+  				localStorage.setItem("lastname", lastname.value);
   				var email = document.getElementById('email');
   				localStorage.setItem("email", email.value);
   				var phone = document.getElementById('phone');
   				localStorage.setItem("phoneNum", phone.value);
 
   				//console.log(localStorage.getItem("email"));
-  				fullName.value = "";
+  				firstname.value = "";
+  				lastname.value= "";
   				email.value = "";
   				phone.value = "";
 
@@ -80,45 +88,44 @@
   			}
   		</script>
         <div class="ownerPreferences">
-		  <div class="vertical-menu" id="accordion">
-		    <div class="panel panel-default">
-		      <div class="panel-heading">
-		        <h4 class="panel-title">
-		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Locations</a>
+        	<br>
+		  <div class="vertical-menu" id="accordion" >
+
+		    <div class="panel panel-default" style = "margin-bottom: 5%;">
+		      <div class="panel-heading" >
+		        <h4 class="panel-title" style = "text-align:center; ">
+		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Location Preference</a>
 		        </h4>
 		      </div>
-		      <div id="collapse1" class="panel-collapse collapse in">
+		      <div id="collapse1" class="panel-collapse collapse">
 		        <div class="panel-body">
-		        <h5> Let's get started! Input up to 3 of your highest desired locations to open a coffee shop.</h5>
-		        <div class = "col-xs-9">
-		        <div class="form-group">
-				  <label >Location:</label>
-				  <input type="text" class="form-control" id="l1">
-				</div>
-				<div class="form-group">
-				  <label >Location:</label>
-				  <input type="text" class="form-control" id="l2">
-				</div>
-				<div class="form-group">
-				  <label >Location:</label>
-				  <input type="text" class="form-control" id="l3">
-				</div>
-				</div>
+		        	<h5 style = "text-align:center;"> Let's Start! Input three preferred locations for starting your business. </h5>
+			        	 <div class = "col-xs-11">
+					        <div class="form-group" style = "margin: 0 auto;">
+							  <h6>&emsp;Location:</h6>
+							  <input type="text" class="form-control" id="l1">
+							  <h6>&emsp;Location:</h6>
+							  <input type="text" class="form-control" id="l2">
+							  <h6>&emsp;Location:</h6>
+							  <input type="text" class="form-control" id="l3">
+							</div>
+						</div>
+
 		        </div>
 		      </div>
 		    </div>
-		    <div class="panel panel-default">
+		    <div class="panel panel-default" style = "margin-bottom: 5%;">
 		      <div class="panel-heading">
-		        <h4 class="panel-title">
+		        <h4 class="panel-title" style = "text-align:center;">
 		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Rent</a>
 		        </h4>
 		      </div>
 		      <div id="collapse2" class="panel-collapse collapse">
 		        <div class="panel-body">
-		        	<h5> Input your appropriate rent preference($/month) </h5>
-			        	 <div class = "col-xs-9">
+		        	<h5 style = "text-align:center;"> Input your appropriate rent preference($/month) </h5>
+			        	 <div class = "col-xs-11">
 					        <div class="form-group">
-							  <label >Rent:</label>
+							  <h6 >&emsp;Rent:</h6>
 							  <input type="text" class="form-control" id="rent">
 							</div>
 						</div>
@@ -126,18 +133,18 @@
 		        </div>
 		      </div>
 		    </div>
-		    <div class="panel panel-default">
+		    <div class="panel panel-default" style = "margin-bottom: 5%;">
 		      <div class="panel-heading">
-		        <h4 class="panel-title">
+		        <h4 class="panel-title" style = "text-align:center;">
 		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Population</a>
 		        </h4>
 		      </div>
 		      <div id="collapse3" class="panel-collapse collapse">
 		        <div class="panel-body">
-		        <h5> Select your appropriate population preference </h5>
-			        <div class = "col-xs-9">
+		        <h5 style = "text-align:center;"> Select your appropriate population preference </h5>
+			        <div class = "col-xs-11">
 					        <div class="form-group">
-							  <label >Population:</label>
+							  <h6 >&emsp;Population:</h6>
 							  <input type="text" class="form-control" id="pop">
 							</div>
 						</div>
@@ -145,18 +152,18 @@
 		      </div>
 		    </div>
 
-		    <div class="panel panel-default">
+		    <div class="panel panel-default" style = "margin-bottom: 5%;">
 		      <div class="panel-heading">
-		        <h4 class="panel-title">
+		        <h4 class="panel-title" style = "text-align:center;">
 		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Proximity to University</a>
 		        </h4>
 		      </div>
 		      <div id="collapse4" class="panel-collapse collapse">
 		        <div class="panel-body">
-		         <h5> Select your appropriate proximity preference (miles) </h5>
-			         <div class = "col-xs-9">
+		         <h5 style = "text-align:center;"> Select your appropriate proximity preference (miles) </h5>
+			         <div class = "col-xs-11">
 					        <div class="form-group">
-							  <label >Proximity:</label>
+							  <h6 >&emsp;Proximity to University:</h6>
 							  <input type="text" class="form-control" id="prx">
 							</div>
 						</div>
@@ -164,18 +171,18 @@
 		      </div>
 		    </div>
 
-		    <div class="panel panel-default">
+		    <div class="panel panel-default" style = "margin-bottom: 5%;">
 		      <div class="panel-heading">
-		        <h4 class="panel-title">
+		        <h4 class="panel-title" style = "text-align:center;">
 		          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Other Preferences</a>
 		        </h4>
 		      </div>
 		      <div id="collapse5" class="panel-collapse collapse">
 		        <div class="panel-body">
-		         <h5> Anything else I should keep into account?</h5>
-			      <div class = "col-xs-9">
+		         <h5 style = "text-align:center;"> Anything else I should keep into account?</h5>
+			      <div class = "col-xs-11">
 					        <div class="form-group">
-							  <label >Enter Below:</label>
+							  <h6 >&emsp;Enter Extra Preferences Below:</h6>
 							  <input type="text" class="form-control" id="othr">
 							</div>
 						</div>
